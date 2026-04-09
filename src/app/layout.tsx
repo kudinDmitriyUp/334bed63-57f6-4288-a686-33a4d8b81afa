@@ -6,22 +6,24 @@ import "@/lib/gsap-setup";
 import { ServiceWrapper } from "@/components/ServiceWrapper";
 import Tag from "@/tag/Tag";
 import { getVisualEditScript } from "@/utils/visual-edit-script";
+import { Libre_Baskerville } from "next/font/google";
 
-const halant = Halant({
-  variable: "--font-halant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: 'Pawsitive | Animal Rescue & Adoption Shelter',
   description: 'Find your perfect companion at Pawsitive. We connect rescue pets with loving homes through dedicated care, medical support, and community engagement.',
 };
+
+const libreBaskerville = Libre_Baskerville({
+  variable: "--font-libre-baskerville",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -31,9 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <ServiceWrapper>
-        <body
-          className={`${halant.variable} ${inter.variable} antialiased`}
-        >
+        <body className={`${libreBaskerville.variable} ${inter.variable} antialiased`}>
           <Tag />
           {children}
           <script
