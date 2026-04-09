@@ -3,7 +3,7 @@
 import ReactLenis from "lenis/react";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleFullscreen from "@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen";
-import HeroOverlayTestimonial from "@/components/sections/hero/HeroOverlayTestimonial";
+import HeroSplit from "@/components/sections/hero/HeroSplit";
 import TestimonialAboutCard from "@/components/sections/about/TestimonialAboutCard";
 import FeatureCardNineteen from "@/components/sections/feature/FeatureCardNineteen";
 import TeamCardSix from "@/components/sections/team/TeamCardSix";
@@ -44,7 +44,7 @@ export default function PetShelterPage() {
         </div>
 
         <div id="hero" data-section="hero">
-          <HeroOverlayTestimonial
+          <HeroSplit
             tag="Animal Rescue & Care"
             tagIcon={PawPrint}
             title="Find Your New Best Friend"
@@ -53,19 +53,11 @@ export default function PetShelterPage() {
               { text: "Meet Our Pets", href: "#services" },
               { text: "Donate", href: "#contact" },
             ]}
-            buttonAnimation="slide-up"
+            background={{ variant: "sparkles-gradient" }}
             imageSrc="https://pixabay.com/get/g20b9c217f758efb3ca15fc90fc10ef99319a89e9dd07506ec1249166ec94e7dbd8b64c0073e044b09706d0ba1d4c1a5ea0b27e31f3b4c4f88511f699b79b5642_1280.jpg"
             imageAlt="Happy rescue dog looking at the camera"
-            showDimOverlay={true}
-            textPosition="top"
-            testimonials={[
-              {
-                name: "Elena R.",                handle: "Adopter",                testimonial: "Pawsitive made the adoption process so seamless. My rescue cat, Luna, is now the heart of our home!",                rating: 5,
-                imageSrc: "https://pixabay.com/get/geb4ea48de1aa1f5f47eb80cda25c118da05a7ff85f32e51d47b1efdb1d85ae1e8bf2b76097915a75967026ad9e0b62842c2171ef5bec1dc696c15e3a984325a0_1280.jpg",                imageAlt: "Elena R."},
-              {
-                name: "Mark J.",                handle: "Adopter",                testimonial: "The dedication this shelter has for every animal is incredible. We found our perfect senior dog here.",                rating: 5,
-                imageSrc: "https://pixabay.com/get/ga0d3589a28fed94aa8e6c93cc2bf02cf3d48c25eb28ca0edef7a8b2acac3fcb2d4cf9d35ffd580ae73892d8288feab9038c919f4e2370d2947a6d2853a24643a_1280.jpg",                imageAlt: "Mark J."},
-            ]}
+            mediaAnimation="slide-up"
+            imagePosition="right"
           />
         </div>
 
